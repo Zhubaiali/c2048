@@ -16,31 +16,33 @@ static void OutputLine(int row)
     int j;
     for(j=0;j<COL;j++)
     {
-        printf("|");
-        if(cells[row][j]=0)
+        printf("©¦");
+        if(cells[row][j]==0)
             printf("        ");
         else
             printf("%8d",cells[row][j]);
     }
-    printf("|\n");
+    printf("©¦\n");
+}
+
+void Output()
+{
+    printf("©°©¤©¤©¤©¤©Ð©¤©¤©¤©¤©Ð©¤©¤©¤©¤©Ð©¤©¤©¤©¤©´\n");
+    OutputLine(0);
+    printf("©À©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©È\n");
+     OutputLine(1);
+      printf("©À©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©È\n");
+     OutputLine(2);
+    printf("©À©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©à©¤©¤©¤©¤©È\n");
+      OutputLine(3);
+      printf("©¸©¤©¤©¤©¤©Ø©¤©¤©¤©¤©Ø©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¼\n");
 }
 void InsertANumber()
 {
     srand((unsigned)time(NULL));
     cells[rand()%ROW][rand()%COL]=2;
 }
-void Output()
-{
-    printf("©°©¤©¤©¤©¤©Ð©¤©¤©¤©¤©Ð©¤©¤©¤©¤©Ð©¤©¤©¤©¤©´\n");
-    OutputLine(0);
-    printf("©À©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦\n");
-     OutputLine(1);
-      printf("©À©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦©¤©¤©¤©¤©¦\n");
-     OutputLine(2);
-     printf("©¸©¤©¤©¤©¤©Ø©¤©¤©¤©¤©Ø©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¼\n");
-      OutputLine(3);
 
-}
 int MoveLeft(){return 1;}
 int MoveRight(){return 1;}
 int MoveUp(){return 1;}
