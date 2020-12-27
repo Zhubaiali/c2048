@@ -1,5 +1,5 @@
 
-#indef BOARD_H_INCLUDE
+#ifndef BOARD_H_INCLUDE
 #define BOARD_H_INCLUDE
 
 #include<stdio.h>
